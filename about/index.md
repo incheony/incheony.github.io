@@ -16,6 +16,7 @@ comments: false
 * Exercising
 * Photographs
 * Traveling
+* 3X3 Rubik's Cube
 
 {% capture images %}
     https://incheony.github.io/assets/img/moi.jpg

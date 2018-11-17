@@ -2,7 +2,7 @@
 layout: page
 title: About Me :>
 tags: [about, incheony]
-date: 2018-11-04
+date: 2018-11-17
 comments: false
 ---
     

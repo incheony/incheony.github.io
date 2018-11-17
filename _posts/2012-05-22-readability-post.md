@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Testing Readability with a Bunch of Text"
-date: 2012-05-22
+date: 2018-11-17
 excerpt: "A ton of text to test readability."
+category: [daily]
 tags: [sample post, readability, test]
 comments: true
 ---

@@ -3,10 +3,6 @@ layout: page
 title: Categories
 comments: false
 ---
-
-{% capture site_category %}{% for tag in site.category %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign category_list = site_category | split:',' | sort %}
-
 <ul id="category-list">
     {\% for post in site.category.category \%}
         {\% include index.html \%}

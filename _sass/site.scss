@@ -189,7 +189,6 @@ header .entry-meta {
 	 display: inline-block; // hide header meta on small screens
 	 @media #{$small} {
 		width: 100%;
-		padding: 2em 0;
 	    box-shadow: none;
 	}
 }

@@ -187,6 +187,7 @@ body {
 }
 header .entry-meta {
 	 display: inline-block; // hide header meta on small screens
+     margin-bottom: 100rem;
 	 @media #{$small} {
 		width: 100%;
 	    box-shadow: none;

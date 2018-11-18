@@ -209,7 +209,7 @@ body {
 	}
 }
 header .entry-meta {
-	display: block; // hide header meta on small screens
+	display: inline-block; // hide header meta on small screens
 }
 .entry-title a {
     text-decoration: none;

@@ -29,7 +29,7 @@ comments: false
 		<ul>
     {% for post in site.tags[this_word] %}{% if post.title != null %}
       <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endif %}{% endfor %}<br><br><br>
+    {% endif %}{% endfor %}<br>
 		</ul>
 	</article><!-- /.hentry -->
 {% endunless %}{% endfor %}

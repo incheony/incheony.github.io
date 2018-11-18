@@ -187,8 +187,8 @@ body {
 }
 header .entry-meta {
 	 display: inline-block; // hide header meta on small screens
-	 @media #{$small} {
-	    box-shadow: none;
+	@media #{$notsmall} {
+		display: block;
 	}
 }
 .entry-title a {

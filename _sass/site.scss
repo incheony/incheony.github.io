@@ -209,9 +209,10 @@ body {
 	}
 }
 header .entry-meta {
-	display: none; // hide header meta on small screens
-	@media #{$notsmall} {
-		display: block;
+	display: inline-block; // hide header meta on small screens
+	@media #{$small} {
+	    width: 100%;
+	    box-shadow: none;
 	}
 }
 .entry-title a {

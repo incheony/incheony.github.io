@@ -186,7 +186,7 @@ body {
 	}
 }
 header .entry-meta {
-	display: none; // hide header meta on small screens
+	display: inline-block; // hide header meta on small screens
 	@media #{$notsmall} {
 		display: block;
 	}
@@ -195,13 +195,6 @@ header .entry-meta {
     text-decoration: none;
 }
 .entry-tags {
-	display: block;
-    margin-top: 1rem;
-	width: 70%;
-    float: left;
-    text-align: left;
-}
-.entry-category {
 	display: block;
     margin-top: 1rem;
 	width: 70%;

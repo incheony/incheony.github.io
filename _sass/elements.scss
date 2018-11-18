@@ -196,14 +196,6 @@ kbd {
 		width: 100%;
 	}
 }
-.goup-container {
-    border-radius: 3px !important;
-    border-color: rgba($color_mercury,0.5) rgba($color_bon_jour,0.5) $color_mischka !important;
-    border: 1px solid;
-	@media #{$small} {
-		display: none !important;
-	}
-}
 .goup-arrow {
     border-color: transparent transparent $color_tuatara !important;
 }

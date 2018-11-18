@@ -186,7 +186,7 @@ body {
 	}
 }
 header .entry-meta {
-	 display: none; // hide header meta on small screens
+	display: none; // hide header meta on small screens
 	@media #{$notsmall} {
 		display: block;
 	}

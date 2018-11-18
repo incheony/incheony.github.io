@@ -213,6 +213,10 @@ header .entry-meta {
 	@media #{$notsmall} {
 		display: block;
 	}
+	@media #{$small} {
+		width: 100%;
+	    box-shadow: none;
+	}    
 }
 .entry-title a {
     text-decoration: none;

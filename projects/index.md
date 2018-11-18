@@ -1,6 +1,5 @@
 ---
-layout: project
+layout: photographs
 title: Photographs
-excerpt: "A List of Projects"
 comments: false
 ---

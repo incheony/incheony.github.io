@@ -214,7 +214,8 @@ header .entry-meta {
 		display: block;
 	}
 	@media #{$small} {
-		width: 100%;
+		display: inline-block;
+        width: 100%;
 	    box-shadow: none;
 	}    
 }

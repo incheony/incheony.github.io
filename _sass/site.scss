@@ -186,7 +186,11 @@ body {
 	}
 }
 header .entry-meta {
-	 display: inline-block; // hide header meta on small screens
+	 display: block; // hide header meta on small screens
+	 @media #{$small} {
+		width: 100%;
+	    box-shadow: none;
+	}
 }
 .entry-title a {
     text-decoration: none;

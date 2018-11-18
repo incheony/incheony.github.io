@@ -13,7 +13,7 @@ layout: compress
     {% include nav.html %}
     <!-- Header -->
     <header class="header" role="banner">
-        <div class="wrapper2 animated fadeIn">
+        <div class="wrapper animated fadeIn">
             <div class="content">
                 <div class="post-title">
                     <h1>{{ page.title }}</h1>
@@ -21,30 +21,24 @@ layout: compress
                         <i class="fa fa-home"></i>
                     </a>
                 </div>
-             <h4><center>Here are some photographs I took!</center></h4>
-            {% capture images %}
-            https://incheony.github.io/assets/img/sri.jpg
-            https://incheony.github.io/assets/img/cam.jpg
-            https://incheony.github.io/assets/img/hk.jpg
-            https://incheony.github.io/assets/img/ny.jpg
-            {% endcapture %}
-            {% include gallery images=images caption="Sri Lanka, Cambodia, Hong Kong, New York" cols=2 %}
-
-           </div>
-            <a href="https://incheony.github.io/" class="btn zoombtn">Back</a>
+                <div class="post-list">
+                    {% for post in site.posts %} 
+                        {% if post.project %}
+                    <ul>
+                        <li class="wow fadeInLeft" data-wow-duration="1.5s">
+                            <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                            <p>{{ post.excerpt }}</p>
+                            <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a>
+                        </li>
+                    </ul>
+                      {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </header>
     {% include scripts.html %}
     <script src="{{ site.url }}/assets/js/wow.min.js"></script>
     <script type="text/javascript">(new WOW).init();</script>
-    <script>if (desktopModeTF == "true") {document.write(
-    '<button onclick="undesktopMode()" style="width:100%;font-size: 3em;padding:2em;border: gray solid .3em;">Mobile Version</button>'
-     );}</script>
-    <script>
-    function undesktopMode() {
-    document.cookie="DesktopMode=false";
-    location.reload();
-    }
-    </script>
 </body>
 </html>

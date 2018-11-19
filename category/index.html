@@ -4,16 +4,23 @@ title: Categories
 comments: false
 ---
 
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort %}
 
-<div class="entry-meta inline-list">
-  <div class="entry-mata.tag">
-    {% for tag in site.categories %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
-    {% endfor %}
-  </div>
-    
-  <hr/>
-    
+<ul class="entry-meta inline-list">
+  {% for item in (0..site.category.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ category_list[item] | strip_newlines }}{% endcapture %}
+  	<li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span> <span class="count">{{ site.category[this_word].size }}</span></a></li>
+  {% endunless %}{% endfor %}
+</ul>
+
+<br>
+
+<hr class="hr-line">
+
+<br>
+<br>
+
 {% for item in (0..site.category.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ category_list[item] | strip_newlines }}{% endcapture %}
 	<article>
@@ -25,7 +32,3 @@ comments: false
 		</ul>
 	</article><!-- /.hentry -->
 {% endunless %}{% endfor %}
-    
-    
-</div>
-

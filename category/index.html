@@ -5,28 +5,27 @@ comments: false
 ---
 
 
-<div class="entry-meta">
+<div class="entry-meta inline-list">
   <div class="entry-mata.tag">
     {% for tag in site.categories %}
     <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
     {% endfor %}
   </div>
+    
   <hr/>
-  <div class="tags-expo-section">
-    {% for tag in site.categories %}
-    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
-    <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <h4><a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-      <li style="margin-bottom: -0.7rem;">
-        {{ post.title }}
-      <small class="post-date">{{ post.date | date_to_string }}</small>
-      </li>
-      </a></h4>
-      {% endfor %}
-    </ul><br>
-    {% endfor %}
-  </div>
+    
+{% for item in (0..site.category.size) %}{% unless forloop.last %}
+  {% capture this_word %}{{ category_list[item] | strip_newlines }}{% endcapture %}
+	<article>
+	<h2 id="{{ this_word }}" class="tag-heading">{{ this_word }}</h2>
+		<ul>
+    {% for post in site.category[this_word] %}{% if post.title != null %}
+      <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    {% endif %}{% endfor %}<br>
+		</ul>
+	</article><!-- /.hentry -->
+{% endunless %}{% endfor %}
+    
+    
 </div>
-
 

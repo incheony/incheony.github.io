@@ -45,5 +45,24 @@ layout: compress
     <!-- MathJax -->
     <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     {% endif %}
+
+ <div class="post-tail">
+	<h2>Related Posts</h2>
+	<ul class="items">
+	{% assign ps = [] %}
+	{% for t in page.tags %}
+		{% for p in site.tags[t] limit: 5 %}
+			{% unless ps contains p.url %}
+				<li><a href="{{ p.url }}">{{ p.title }}</a>
+					<span class="meta">&raquo; {{t}}, {{ p.date |date: '%F' }}</span>
+				</li>
+			{% endunless %}
+			{% assign ps = ps|join: ' ' |append: ' ' |append: p.url |split: ' ' %}
+		{% endfor %}
+	{% endfor %}
+	</ul>
+</div>       
+        
+        
 </body>
 </html>

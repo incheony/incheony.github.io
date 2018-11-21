@@ -150,22 +150,19 @@ body {
 }
 // Read More Module
 .read-more {
-	position: relative;
+	width: 75%;
+	max-width: 850px;
 	margin: -3rem auto 4rem;
+	background: $white;
+	color: $color_tuatara;
 	padding: 2em;
-	background-color: #fff;
-	box-shadow: 0 0 0 1px lighten(rgba(#fff,0.1),60), 0 6px 12px rgba(#000,0.1);
 	border-radius: 3px;
-
-	@media #{$medium} {
-		margin: 50px 10px 20px 10px;
-		padding: 50px 40px 25px;
-	}
-
-	@media #{$large} {
-		max-width: 850px;
-		padding: 2em;
-		margin: -3rem auto 4rem;
+	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
+	border-radius: 3px;
+	@media #{$small} {
+		width: 90%;
+		padding: 2em 0;
+	    box-shadow: none;
 	}
 
 	text-align: center;

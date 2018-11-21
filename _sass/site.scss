@@ -159,21 +159,17 @@ body {
 	border-radius: 3px;
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	border-radius: 3px;
+	text-align: center;
+	@include transition(.5s);
 	@media #{$small} {
 		width: 90%;
 		padding: 2em 0;
 	    box-shadow: none;
-	}
-
-	text-align: center;
-	@include transition(.5s);
+	}    
 }
 
 .read-more-header {
 	position: absolute;
-	top: -20px;
-	left: 0;
-	right: 0;
 	height: 35px;
 
 	a {

@@ -155,7 +155,7 @@ body {
 	margin: 40px 2px 20px 2px;
 	padding: 40px 15px 25px;
 	background-color: #fff;
-	box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1);
+	box-shadow: 0 0 0 1px rgba(lighten($base-color,60),0.1), 0 6px 12px rgba(#000,0.1);
 	border-radius: 3px;
 
 	@media #{$medium} {

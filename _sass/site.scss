@@ -248,11 +248,13 @@ header .entry-meta {
         background-position: center center;
     }
 }
+
+        
 // Read More Module
 .read-more {
 	position: relative;
-	margin: 40px 2px 20px 2px;
-	padding: 40px 15px 25px;
+	margin: -3rem auto 4rem;
+	padding: 2em;
 	background-color: #fff;
 	box-shadow: 0 0 0 1px lighten(rgba(#fff,0.1),60), 0 6px 12px rgba(#000,0.1);
 	border-radius: 3px;

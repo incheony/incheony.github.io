@@ -46,6 +46,27 @@ layout: compress
     <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     {% endif %}
 
+        
+        
+ 	<div class="so document meta">
+		<div class="tags">
+			{% for tag in page.tags %}
+			<a class="tag-item" href="/tags/{{ tag }}.html">{{ tag }}</a>
+			{% endfor %}
+		</div>
+
+		<div class="post-hierarchy noprint">
+			{% if page.previous %}<p class="pull-left"><a href="{{ page.previous.url }}"
+				title="Previous post"><i class="icon arrow left"></i>
+				{{ page.previous.title }}</a></p>
+			{% endif %}
+			{% if page.next %}<p class="pull-right"><a href="{{ page.next.url }}"
+				title="Next post">{{ page.next.title }}
+				<i class="icon arrow right"></i></a></p>
+			{% endif %}
+		</div>
+	</div>       
+        
  <div class="post-tail">
 	<h2>Related Posts</h2>
 	<ul class="items">

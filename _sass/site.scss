@@ -155,7 +155,7 @@ body {
 	margin: 40px 2px 20px 2px;
 	padding: 40px 15px 25px;
 	background-color: #fff;
-	box-shadow: 0 0 0 1px rgba(#fff,0.1), 0 6px 12px rgba(#000,0.1);
+	box-shadow: 0 0 0 1px lighten(rgba(#fff,0.1),60), 0 6px 12px rgba(#000,0.1);
 	border-radius: 3px;
 
 	@media #{$medium} {
@@ -203,7 +203,7 @@ body {
 		@include font-rem(28);
 
 		a { 
-			color: $text-color;
+			color: rgba(#222,0.8);
 		}
 
 		@media #{$medium} {
@@ -213,7 +213,7 @@ body {
 }
 
 .read-more-list {
-	border-top: solid 2px lighten($base-color,80);
+	border-top: solid 2px lighten(rgba(#222,0.8),80);
 }
 
 .list-item {
@@ -228,7 +228,7 @@ body {
 	span { 
 		display: block;
 		@include font-rem(14);
-		color: lighten($base-color,50);
+		color: lighten(rgba(#222,0.8),50);
 	}
 
 	@media #{$medium} {

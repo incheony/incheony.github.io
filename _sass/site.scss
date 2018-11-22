@@ -168,7 +168,8 @@ body {
 }
 
 .read-more-header {
-	position: absolute;
+	position: relative;
+    top: -20px;
 	height: 35px;
 
 	a {

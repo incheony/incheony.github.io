@@ -176,9 +176,6 @@ body {
 	@include center-block();
 	height: 35px;
 
-	a {
-		@extend .btn;
-	}
 }
 
 .read-more-content {

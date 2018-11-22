@@ -177,7 +177,7 @@ body {
 	@include center-block();
 	height: 35px;    
 	a {
-		@extend .btn;
+		@extend .btn1;
 	}
 	@media #{$small} {
 		width: 90%;
@@ -185,8 +185,15 @@ body {
 	    box-shadow: none;
 	}
 	@media #{$medium} {
-		width: 80%;
+		width: 90%;
+        padding: 2em 0;
+	    box-shadow: none;
 	}
+	@media #{$notsmall} {
+		width: 90%;
+        padding: 2em 0;
+	    box-shadow: none;
+	}    
 }
 
 .read-more-content {

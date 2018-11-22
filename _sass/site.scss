@@ -169,7 +169,11 @@ body {
 }
 
 .read-more-header {
-	position: absolute;
+	width: 36rem;
+	max-width: 550px;
+	padding-right: 15px;
+	padding-left: 15px;
+	@include center-block();
 	height: 35px;
 
 	a {

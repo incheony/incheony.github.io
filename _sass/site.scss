@@ -150,33 +150,26 @@ body {
 }
 // Read More Module
 .read-more {
-	position: relative;
-	margin: 40px 2px 20px 2px;
-	padding: 40px 15px 25px;
-	background-color: #fff;
-	box-shadow: 0 0 0 1px rgba(#000,0.1), 0 6px 12px rgba(#000,0.1);
+	width: 75%;
+	max-width: 850px;
+	margin: -3rem auto 4rem;
+	background: $white;
+	color: $color_tuatara;
+	padding: 2em;
 	border-radius: 3px;
-
-	@media #{$medium} {
-		margin: 50px 10px 20px 10px;
-		padding: 50px 40px 25px;
-	}
-
-	@media #{$large} {
-		max-width: 800px;
-		padding: 50px 80px;
-		margin: 60px auto;
-	}
-
+	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
+	border-radius: 3px;
 	text-align: center;
-	@include clearfix;
+	@include transition(.5s);
+	@media #{$small} {
+		width: 90%;
+		padding: 2em 0;
+	    box-shadow: none;
+	}    
 }
 
 .read-more-header {
 	position: absolute;
-	top: -20px;
-	left: 0;
-	right: 0;
 	height: 35px;
 
 	a {
@@ -190,7 +183,7 @@ body {
 	// Dotted line underlines for links
 	p > a,
 	li > a {
-		border-bottom: 1px dotted lighten(#000, 50);
+		border-bottom: 1px dotted lighten(rgba(#222,0.8), 50);
 
 		&:hover {
 			border-bottom-style: solid;
@@ -202,7 +195,7 @@ body {
 		@include font-rem(28);
 
 		a { 
-			color: lighten(#000,80);
+			color: rgba(#222,0.8);
 		}
 
 		@media #{$medium} {
@@ -212,7 +205,7 @@ body {
 }
 
 .read-more-list {
-	border-top: solid 2px lighten(#000,80);
+	border-top: solid 2px lighten(rgba(#222,0.8),80);
 }
 
 .list-item {
@@ -227,7 +220,7 @@ body {
 	span { 
 		display: block;
 		@include font-rem(14);
-		color: lighten(#000,50);
+		color: lighten(rgba(#222,0.8),50);
 	}
 
 	@media #{$medium} {
@@ -239,6 +232,7 @@ body {
 		}
 	}
 }
+
 // entry meta
 .entry-meta {
 	@include font-rem(12);

@@ -7,14 +7,8 @@
             {% assign relatedCount = relatedCount | plus: 1 %}
             <a href="{{related.permalink}}">{{ related.title }}</a>
         {% endunless %}
-
         {% if relatedCount == 3 %}
             {% break %}
         {% endif %}
-        {% assign sortedCategories = page.categories | sort %}
-        {% for category in sortedCategories %}
-        <span class="tag">
-            <a href="/category/{{ category }}">#{{ category }}</a>
-        </span>
     {% endfor %}
 </div>

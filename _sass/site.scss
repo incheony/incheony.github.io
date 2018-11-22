@@ -175,17 +175,18 @@ body {
 	padding-right: 15px;
 	padding-left: 15px;
 	@include center-block();
-	height: 35px;
+	height: 35px;    
+	a {
+		@extend .btn;
+	}
 	@media #{$small} {
 		width: 90%;
 		padding: 2em 0;
 	    box-shadow: none;
 	}
-    
-	a {
-		@extend .btn;
-	}    
-
+	@media #{$medium} {
+		width: 80%;
+	}
 }
 
 .read-more-content {

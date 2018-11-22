@@ -202,7 +202,7 @@ body {
 		@include font-rem(28);
 
 		a { 
-			color: $text-color;
+			color: lighten(#000,80);
 		}
 
 		@media #{$medium} {

@@ -169,12 +169,18 @@ body {
 }
 
 .read-more-header {
+    @extend %extend1;
 	width: 36rem;
 	max-width: 550px;
 	padding-right: 15px;
 	padding-left: 15px;
 	@include center-block();
 	height: 35px;
+	@media #{$small} {
+		width: 90%;
+		padding: 2em 0;
+	    box-shadow: none;
+	}    
 
 }
 

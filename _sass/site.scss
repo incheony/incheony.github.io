@@ -199,6 +199,7 @@ body {
 
 .read-more-content {
     @extend %extend1;
+    margin-top: 20px;
 	@include font-size(16);
 
 	// Dotted line underlines for links

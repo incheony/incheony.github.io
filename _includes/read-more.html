@@ -9,11 +9,20 @@
     </div><!-- /.read-more-content -->
   {% endfor %}
   <div class="read-more-list">
-    {% for post in site.related_posts limit:4 offset:1 %}
+    {% for post in site.related_posts limit:5 offset:1 %}
+      {% assign match = false %}
+      {% for category in post.categories %}
+        {% if page.categories contains category %}
+          {% assign match = true %}
+        {% endif %}
+      {% endfor %}
+      {% if match %}      
       <div class="list-item">
         <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
         <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>
       </div><!-- /.list-item -->
+      {% endif %}  
     {% endfor %}
   </div><!-- /.read-more-list -->
 </div><!-- /.read-more -->
+

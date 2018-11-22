@@ -157,7 +157,7 @@ body {
 	color: $color_tuatara;
 	padding: 2em;
 	border-radius: 3px;
-	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
+	box-shadow: 0 0 0 1px rgba($lighten(#222,50),0.1), 0 6px 12px rgba(#000,0.1);
 	border-radius: 3px;
 	text-align: center;
 	@include transition(.5s);
@@ -170,6 +170,8 @@ body {
 
 .read-more-header {
 	position: absolute;
+    left: 0;
+	right: 0;
 	height: 35px;
 
 	a {

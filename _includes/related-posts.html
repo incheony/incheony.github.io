@@ -10,8 +10,7 @@
         {% if relatedCount == 3 %}
             {% break %}
         {% endif %}
-    {% endfor %}
-    {% assign sortedCategories = page.categories | sort %}
+        {% assign sortedCategories = page.categories | sort %}
     {% for category in sortedCategories %}
         <span class="tag">
             <a href="/category/{{ category }}">#{{ category }}</a>

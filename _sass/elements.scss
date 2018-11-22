@@ -83,9 +83,26 @@
 }
 .btn1 {
   display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 20px;
+  @include font-rem(14);
+  background-color: $primary;
+  color: #fff;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: $primary;
+  border-radius: 3px;
+
+  &:visited {
+    color: #fff;
+  }
+
+  &:hover {
     background-color: #fff;
-    color: #222;
+    color: $primary;
+  }
 }
+
 // hr break
 hr {
 	border: 0;

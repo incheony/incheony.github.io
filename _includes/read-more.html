@@ -10,7 +10,7 @@
   {% endfor %}
   <div class="read-more-list">
     {% assign category = page.category | default: page.title %}  
-    {% for post in site.categories[category] limit:5 offset:1 %}
+    {% for post in site.categories[category] %}
       <div class="list-item">
           <li><h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4></li>
         <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>

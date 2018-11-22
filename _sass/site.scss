@@ -176,7 +176,9 @@ body {
 	padding-left: 15px;
 	@include center-block();
 	height: 35px;    
-	a {
+    position: absolute;
+	top: -20px;  
+    a {
 		@extend .btn1;
 	}
 	@media #{$small} {

@@ -157,7 +157,7 @@ body {
 	color: $color_tuatara;
 	padding: 2em;
 	border-radius: 3px;
-	box-shadow: 0 0 0 1px rgba($lighten(#222,50),0.1), 0 6px 12px rgba(#000,0.1);
+	box-shadow: 0 0 0 1px rgba(lighten(#222,50),0.1), 0 6px 12px rgba(#000,0.1);
 	border-radius: 3px;
 	text-align: center;
 	@include transition(.5s);

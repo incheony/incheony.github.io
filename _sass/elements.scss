@@ -81,7 +81,12 @@
         @include font-rem(14);
     }
 }
-
+.btn1 {
+  display: inline-block;
+    background-color: #fff;
+    color: $primary;
+  }
+}
 // hr break
 hr {
 	border: 0;

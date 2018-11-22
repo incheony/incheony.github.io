@@ -2,7 +2,6 @@
 layout: post
 title: "첫 글"
 date: 2018-11-21
-permalink: "2018-11-21-first_post"
 excerpt: "블로그 시작-*"
 category: 일상
 tags: 일상

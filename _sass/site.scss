@@ -180,6 +180,10 @@ body {
 		width: 90%;
 		padding: 2em 0;
 	    box-shadow: none;
+	}
+    
+	a {
+		@extend .btn;
 	}    
 
 }

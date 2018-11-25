@@ -320,7 +320,12 @@ header .entry-meta {
 		display: inline-block;
         width: 100%;
 	    box-shadow: none;
-	}    
+	}
+    @media #{$medium} {
+		display: inline-block;
+        width: 100%;
+	    box-shadow: none;
+	}  
 }
 .entry-title a {
     text-decoration: none;

@@ -256,29 +256,22 @@ body {
 }
 // related-post
 .related {
-	width: 100%;
-	text-align: left;
-
-	h4 { 
-		@include font-rem(18);
-		margin-bottom: 0; 
-	}
-
-	span { 
-		display: block;
-		@include font-rem(14);
-		color: lighten(rgba(#222,0.8),50);
-	}
-
-	@media #{$medium} {
-		width: 49%;
-		float: left;
-
-		&:nth-child(2) {
-			text-align: right;
-		}
-	}
-}
+	width: 75%;
+	max-width: 850px;
+	margin: -3rem auto 4rem;
+	background: $white;
+	color: $color_tuatara;
+	padding: 2em;
+	border-radius: 3px;
+	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
+	border-radius: 3px;
+	text-align: center;
+	@include transition(.5s);
+	@media #{$small} {
+		width: 90%;
+		padding: 2em 0;
+	    box-shadow: none;
+	}    
 }
 
 // entry meta

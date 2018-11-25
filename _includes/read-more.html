@@ -19,13 +19,11 @@
              {% assign moreThanOneInCategory = true %}
           {% endif %}
         {% endfor %}
-      
-        {% if moreThanOneInCategory == true %}
-          <div class="list-item">
-             <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
-             <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>        
-         </div><!-- /.list-item -->
-        {% endif %}
+     
+        <div class="list-item">
+           <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
+           <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>        
+        </div><!-- /.list-item -->
       {% endfor %}
     {% endfor %}
   </div><!-- /.read-more-list -->

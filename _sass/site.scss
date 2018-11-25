@@ -165,17 +165,7 @@ body {
 		width: 90%;
 		padding: 2em 0;
 	    box-shadow: none;
-	}
-    @media #{$medium} {
-		width: 90%;
-        padding: 2em 0;
-	    box-shadow: none;
-	}
-	@media #{$notsmall} {
-		width: 90%;
-        padding: 2em 0;
-	    box-shadow: none;
-	}   
+	}    
 }
 
 .read-more-header {

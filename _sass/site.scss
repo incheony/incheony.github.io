@@ -165,12 +165,7 @@ body {
 		width: 90%;
 		padding: 2em 0;
 	    box-shadow: none;
-	}
-    @media #{$notsmall} {
-		width: 90%;
-		padding: 2em 0;
-	    box-shadow: none;
-	}
+	}    
 }
 
 .read-more-header {
@@ -232,6 +227,7 @@ body {
 }
 
 .read-more-list {
+    @extend %extend1;
 	border-top: solid 2px lighten(rgba(#222,0.8),80);
 }
 
@@ -251,14 +247,6 @@ body {
 	}
 
 	@media #{$medium} {
-		width: 49%;
-		float: left;
-
-		&:nth-child(2) {
-			text-align: right;
-		}
-	}
-    @media #{$notsmall} {
 		width: 49%;
 		float: left;
 

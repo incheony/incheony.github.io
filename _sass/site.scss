@@ -165,8 +165,19 @@ body {
 		width: 90%;
 		padding: 2em 0;
 	    box-shadow: none;
+	}
+	@media #{$medium} {
+		width: 90%;
+        padding: 2em 0;
+	    box-shadow: none;
+	}
+	@media #{$notsmall} {
+		width: 90%;
+        padding: 2em 0;
+	    box-shadow: none;
 	}    
 }
+
 
 .read-more-header {
     @extend %extend1;
@@ -321,11 +332,6 @@ header .entry-meta {
         width: 100%;
 	    box-shadow: none;
 	}    
-	@media #{$medium} {
-		display: inline-block;
-        width: 100%;
-	    box-shadow: none;
-	} 
 }
 .entry-title a {
     text-decoration: none;

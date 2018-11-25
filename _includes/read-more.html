@@ -24,8 +24,8 @@
           <div class="list-item">
             {% for post in posts %}
               {% unless post.url == page.url %}
-                 <ul><h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
-                     <span>Published on {{ post.date | date: "%B %d, %Y" }}</span></ul>
+                 <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
+                 <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>
               {% endunless %}
             {% endfor %}             
          </div><!-- /.list-item -->

@@ -165,8 +165,14 @@ body {
 		width: 90%;
 		padding: 2em 0;
 	    box-shadow: none;
+	}
+	@media #{$notsmall} {
+		width: 90%;
+        padding: 2em 0;
+	    box-shadow: none;
 	}    
 }
+
 
 .read-more-header {
     @extend %extend1;
@@ -183,11 +189,6 @@ body {
 	@media #{$small} {
 		width: 90%;
 		padding: 2em 0;
-	    box-shadow: none;
-	}
-	@media #{$medium} {
-		width: 90%;
-        padding: 2em 0;
 	    box-shadow: none;
 	}
 	@media #{$notsmall} {
@@ -374,4 +375,3 @@ header .entry-meta {
         background-position: center center;
     }
 } 
-© 2018 GitHub, Inc.

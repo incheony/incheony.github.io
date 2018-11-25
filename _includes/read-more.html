@@ -9,29 +9,11 @@
     </div><!-- /.read-more-content -->
   {% endfor %}
   <div class="read-more-list">
-    {% for category in page.categories limit:5 %}
-      {% assign moreThanOneInCategory = false %}
-      {% assign posts = site.categories[category] %}
-      
-      {% for post in posts %}
-        {% if forloop.length > 1 %}
-            {% assign moreThanOneInCategory = true %}
-        {% endif %}
-      {% endfor %}
-      
-      {% if moreThanOneInCategory == true %}
-        <div class="list-item">
-            <ui>
-                {% for post in posts %}
-                    {% unless post.url == page.url %}
-                       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
-                       <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>
-                    {% endunless %}
-                {% endfor %}
-            </ui>
-        </div><!-- /.list-item -->
-        {% endfor %}
-      {% endif %} 
+    {% for post in site.related_posts limit:5 offset:1 %}
+      <div class="list-item">
+        <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
+        <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>
+      </div><!-- /.list-item -->
     {% endfor %}
-   </div><!-- /.read-more-list -->
+  </div><!-- /.read-more-list -->
 </div><!-- /.read-more -->

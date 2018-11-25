@@ -22,14 +22,12 @@
 
         {% if moreThanOneInCategory == true %}
           <div class="list-item">
-            <ul>
-              {% for post in posts %}
-                {% unless post.url == page.url %}
-                   <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
-                   <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>
-                {% endunless %}
-              {% endfor %}
-            </ul>              
+            {% for post in posts %}
+              {% unless post.url == page.url %}
+                 <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
+                 <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>
+              {% endunless %}
+            {% endfor %}             
          </div><!-- /.list-item -->
         {% endif %}
       {% endfor %}

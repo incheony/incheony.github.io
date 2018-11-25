@@ -248,21 +248,14 @@ body {
 	}
 
 	@media #{$medium} {
-		width: 49%;
+		width: 100%;
 		float: left;
 
 		&:nth-child(2) {
 			text-align: right;
 		}
 	}
-	@media #{$notsmall} {
-		width: 49%;
-		float: left;
 
-		&:nth-child(2) {
-			text-align: right;
-		}
-	}
 }
 // related-post
 .related {

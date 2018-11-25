@@ -232,6 +232,7 @@ body {
 }
 
 .list-item {
+    @extend %extend1;
 	width: 100%;
 	text-align: left;
 

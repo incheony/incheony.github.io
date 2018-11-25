@@ -248,7 +248,8 @@ body {
 	}
 
 	@media #{$medium} {
-		width: 100%;
+        @extend %extend1;
+		width: 49%;
 		float: left;
 
 		&:nth-child(2) {

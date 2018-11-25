@@ -247,16 +247,6 @@ body {
 		color: lighten(rgba(#222,0.8),50);
 	}
 
-	@media #{$medium} {
-        @extend %extend1;
-		width: 49%;
-		float: left;
-
-		&:nth-child(2) {
-			text-align: right;
-		}
-	}
-
 }
 // related-post
 .related {

@@ -81,6 +81,34 @@ url: http://taylantatli.me/Moon
 url: http://localhost:4000
 url: //cooldude.github.io
 url:
+
+final_dat = NULL
+end_num = 1000
+display_num = 100
+start_point = seq(1,end_num,display_num)
+
+
+final_dat = NULL
+for(i in 1:length(start_point))
+{
+  # request xml format
+  url = paste0('https://openapi.naver.com/v1/search/blog.xml?query=',query,'&display=',display_num,'&start=',start_point[i],'&sort=sim')
+  #option header
+  url_body = read_xml(GET(url, header), encoding = "UTF-8")
+  title = url_body %>% xml_nodes('item title') %>% xml_text()
+  name = url_body %>% xml_nodes('item bloggername') %>% xml_text()
+  date = url_body %>% xml_nodes('postdate') %>% xml_text()
+  link = url_body %>% xml_nodes('item link') %>% xml_text()
+  description = url_body %>% xml_nodes('item description') %>% html_text()
+  temp_dat = cbind(title, name, date, link, description)
+  final_dat = rbind(final_dat, temp_dat)
+  cat(i, '\n')
+  
+}
+final_data_1 = data.frame(final_dat, stringsAsFactors = F)
+final_data_1$type = '블로그'
+final_data_1$date <- anytime(final_data_1$
+
 {% endhighlight %}
 
 #### reading_time

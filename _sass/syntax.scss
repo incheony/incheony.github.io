@@ -3,7 +3,7 @@ pre.highlight {
 }
 
 .highlight {
-	background-color: #49483e;
+	background-color: #282a36;
 	font-family: $font2;
 	@include font-size(14);
 	color: #f8f8f2;
@@ -13,9 +13,9 @@ pre.highlight {
 		margin: 0;
 		padding: 1em;
 	}
-	.lineno            { padding-right: 24px; color: lighten(#49483e,50);}
-	.hll               { background-color: #49483e}
-	.c                 { color: #75715e }                            /* Comment                     */
+	.lineno            { padding-right: 24px; color: lighten(#282a36,50);}
+	.hll               { background-color: #282a36}
+	.c                 { color: #6272a4 }                            /* Comment                     */
 	.err               { color: #960050; background-color: #1e0010 } /* Error                       */
 	.k                 { color: #66d9ef }                            /* Keyword                     */
 	.l                 { color: #ae81ff }                            /* Literal                     */

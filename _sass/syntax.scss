@@ -22,7 +22,7 @@ pre.highlight {
 	.l                 { color: #f8f8f2 }                            /* Literal                     */
 	.n                 { color: #f8f8f2 }                            /* Name                        */
 	.o                 { color: #81a2be }                            /* Operator                    */
-	.p                 { color: #f8f8f2 }                            /* Punctuation                 */
+	.p                 { color: #b36657 }                            /* Punctuation                 */
 	
     .cm                { color: #6272a4 }                            /* Comment.Multiline           */
 	.cp                { color: #ff79c6 }                            /* Comment.Preproc             */
@@ -41,14 +41,14 @@ pre.highlight {
 	.m                 { color: #ffb86c }                            /* Literal.Number              */
 	.s                 { color: #f1fa8c }                            /* Literal.String              */
 	.na                { color: #50fa7b }                            /* Name.Attribute              */
-	.nb                { color: #8be9fd }                            /* Name.Builtin                */
+	.nb                { color: #bd93f9 }                            /* Name.Builtin                */
 	.nc                { color: #50fa7b }                            /* Name.Class                  */
 	.no                { color: #f8f8f2 }                            /* Name.Constant               */
 	.nd                { color: #f8f8f2 }                            /* Name.Decorator              */
 	.ni                { color: #f8f8f2 }                            /* Name.Entity                 */
 	.ne                { color: #f8f8f2 }                            /* Name.Exception              */
 	.nf                { color: #50fa7b }                            /* Name.Function               */
-	.nl                { color: #bd93f9 }                            /* Name.Label                  */
+	.nl                { color: #8be9fd }                            /* Name.Label                  */
 	.nn                { color: #f8f8f2 }                            /* Name.Namespace              */
 	.nx                { color: #f8f8f2 }                            /* Name.Other                  */
 	.py                { color: #f8f8f2 }                            /* Name.Property               */

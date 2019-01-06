@@ -119,7 +119,51 @@ for(i in 1:length(start_point))
 }
 final_data_1 = data.frame(final_dat, stringsAsFactors = F)
 final_data_1$type = '블로그'
-final_data_1$date <- anytime(final_data_1$
+final_data_1$date <- anytime(final_data_1$))
+F
+FALSE
+false
+library(rvest)
+library(dplyr)
+client_id = 'aasdfqwdffefqj';
+client_secret = 'sfdfsfdfdw';
+install.packages("devtools")
+devtoos::install_local("ReinforcementLearning_1.0.0.tar.gz")
+xgfit <- xgboost(data = data.matrix(total_dataset_tr[,-c(1:3,14)]), nfold = 10,
+                 label = data.matrix(total_dataset_tr$Exited),
+                 nrounds = 6922, objective = 'binary:logistic', eval.metric = 'auc',
+                 nthread = 2, eta = 0.01,
+                 gamma = 0.04, max_depth = 5, min_child_weight = 1.5, 
+                 subsample = 0.5432, colsample_byree = 0.45,
+                 early_stopping_rounds = 100)
+xgb_cv_bayes <- function(max_depth, nrounds, min_child_weight, subsample, colsample_bytree, gamma) {
+  cv <- xgb.cv(params = list(booster = "gbtree", eta = 0.01,
+                             max_depth =  max_depth,
+                             min_child_weight = min_child_weight,
+                             subsample = subsample, 
+                             colsample_by_tree = colsample_bytree,
+                             gamma = gamma, 
+                             
+                             objective = "binary:logistic",
+                             eval_metric = "logloss"),
+               data = dtrain, nrounds = nrounds,
+               folds = cv_folds, prediction = TRUE, showsd = TRUE,
+               early_stopping_rounds = 100, maximize = TRUE, verbose = 0)
+  list(Score = cv$evaluation_log$test_logloss_mean[cv$best_iteration],
+       Pred = cv$pred)
+}
+
+OPT_Res <- BayesianOptimization(xgb_cv_bayes,
+                                bounds = list(max.depth = c(5L, 6L),nround = c(5000L, 8000L)
+                                              min_child_weight = c(1.1, 5.0),
+                                              subsample = c(0.5, 0.8),
+                                              gamma = c(0.01, 1),
+                                              colsample_by_tree = c(0.3,1)
+                                              )
+                                init_grid_dt = NULL, init_points = 50, n_iter = 50,
+                                acq = "ucb", kappa = 2.576, eps = 0.0,
+                                verbose = TRUE)
+
 ~~~
 
 

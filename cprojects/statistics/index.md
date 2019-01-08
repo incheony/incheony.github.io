@@ -1,6 +1,6 @@
 ---
 layout: post-list-statistics
-title: posts about Statistics
+title: Statistics
 excerpt: "A List of Posts_Statistics"
 comments: false
 ---

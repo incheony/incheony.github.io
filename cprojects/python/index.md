@@ -1,6 +1,6 @@
 ---
 layout: post-list-python
-title: posts about Python
+title: Python
 excerpt: "A List of Posts_Python"
 comments: false
 ---

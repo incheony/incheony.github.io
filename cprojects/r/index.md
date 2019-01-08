@@ -1,6 +1,6 @@
 ---
-layout: cprojects
-title: Projects
-excerpt: "A List of Projects"
+layout: post-list
+title: posts about R
+excerpt: "A List of Posts_R"
 comments: false
 ---

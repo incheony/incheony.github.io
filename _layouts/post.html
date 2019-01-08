@@ -24,11 +24,16 @@ layout: compress
                       {% include read-time.html %}
                     </p><!-- /.entry-reading-time -->
                     {% endif %}
-                    {% if page.project %}
-                    <a class="btn zoombtn" href="{{site.url}}/projects/">
-                    {% else %}
-                    <a class="btn zoombtn" href="{{site.url}}/posts/">
-                    {% endif %}
+                    {% if page.project %}<a class="btn zoombtn" href="{{site.url}}/projects/">{% endif %}
+                    {% if page.mathematics %}<a class="btn zoombtn" href="{{site.url}}/cprojects/mathematics">{% endif %}
+                    {% if page.statistics %}<a class="btn zoombtn" href="{{site.url}}/cprojects/statistics">{% endif %}
+                    {% if page.ml %}<a class="btn zoombtn" href="{{site.url}}/cprojects/ml">{% endif %}
+                    {% if page.dl %}<a class="btn zoombtn" href="{{site.url}}/cprojects/dl">{% endif %}
+                    {% if page.nlp %}<a class="btn zoombtn" href="{{site.url}}/cprojects/nlp">{% endif %}
+                    {% if page.r %}<a class="btn zoombtn" href="{{site.url}}/cprojects/r">{% endif %}
+                    {% if page.python %}<a class="btn zoombtn" href="{{site.url}}/cprojects/python">{% endif %}
+                    {% if page.sql %}<a class="btn zoombtn" href="{{site.url}}/cprojects/sql">{% endif %}
+                    {% if page.dl %}<a class="btn zoombtn" href="{{site.url}}/cprojects/dl">{% endif %}
                         <i class="fa fa-chevron-left"></i>
                     </a>
                 </div>

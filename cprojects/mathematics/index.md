@@ -1,6 +1,6 @@
 ---
 layout: post-list-mathematics
-title: posts about Mathematics
+title: Mathematics
 excerpt: "A List of Posts_Mathematics"
 comments: false
 ---
